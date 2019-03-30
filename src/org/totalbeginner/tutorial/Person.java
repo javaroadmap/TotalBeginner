@@ -17,7 +17,10 @@ public  class  Person {
 	public int getMaximumBooks() {
 		return maximumBooks;
 	}
-	public void setMaxmimumBooks(int maxmimumBooks) {
+	public void setMaximumBooks(int maxmimumBooks) {
 		this.maximumBooks = maxmimumBooks;
-	}   
+	}  
+	public String toString() {
+		return this.getName()+" ("+ this.maximumBooks +" books)";
+	}  
 }
