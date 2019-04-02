@@ -4,6 +4,7 @@ public class Book {
 
 	public String title;
 	public String author;
+	private Person person;
 
 	public Book(String string) {
         this.title = string;
@@ -17,5 +18,11 @@ public class Book {
 	}
 	public String getTitle() {
 		return title;
+	}
+	public void setPerson(Person p2) {
+        this.person = p2;
+	}
+	public Person getPerson() {
+		return this.person;
 	}
 }
