@@ -20,4 +20,16 @@ class BookTest {
         String testName = testPerson.getName();
         assertEquals("Elvis", testName); 
 	}
+    @Test
+    void  testToString() {
+        Book  b2 = new  Book("War And Peace"); //b2 도서객체 (War And Peace) 생성
+        Person  p2 = new  Person();            // p2 사용자 객체 생성
+        p2.setName("Elvis");                   // p2 사용자 이름 Elvis 설정
+
+        assertEquals("War And Peace by unknown author; Available",b2.toString()); 
+                                               // War And Peace by unknown author; Available 인쇄 테스트
+        b2.setPerson(p2);                      // 도서 b2를사용자 p2에 대여
+        assertEquals("War And Peace by unknown author; Checked out to Elvis",b2.toString()); 
+                                               // War And Peace by unknown author; Checked out to Elvis 인쇄 테스트
+    }
 }

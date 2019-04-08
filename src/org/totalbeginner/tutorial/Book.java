@@ -25,4 +25,14 @@ public class Book {
 	public Person getPerson() {
 		return this.person;
 	}
+    public  String  toString() {
+        String available;                                                                               // 변수 available 설정
+        if (this.getPerson() == null) {                      // 도서 객체의 getPerson() ==null 이면
+            available = "Available";                         // 대출가능  대치
+        } else {                                             // null 이 아니면, 대출되었으면 
+            available = "Checked out to " + this.getPerson().getName();  // available에 대출자 이름 설정
+        }    
+        return  this.getTitle() + " by " + this.getAuthor() + "; " + available;    // 전체 문구 반환
+    }
 }
+
